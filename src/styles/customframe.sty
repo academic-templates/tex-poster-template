@@ -1,0 +1,38 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{styles/customframe}[2022/10/30 Custom Beamer frame package]
+
+%-----------------------------------------------------------
+% Column widths and overall poster size
+% For setting sepwidth, onecolwidth and twocolwidth values, choose the number of columns and the separation first
+% In this template, the separation width is 0.024 of the paper width and a 4-column layout
+% onecolwidth should therefore be (1-(# of columns+1)*sepwidth)/# of columns e.g. (1-(4+1)*0.024)/4 = 0.22
+% Set twocolwidth to be (2*onecolwidth)+sepwidth = 0.464
+% Set threecolwidth to be (3*onecolwidth)+2*sepwidth = 0.708
+\newlength{\sepwidth}
+\newlength{\onecolwidth}
+\newlength{\twocolwidth}
+\newlength{\threecolwidth}
+\setlength{\paperwidth}{36in} % A0 width: 46.8in
+\setlength{\paperheight}{48in} % A0 height: 33.1in
+\setlength{\sepwidth}{0.024\paperwidth} % Separation width (white space) between columns
+\setlength{\onecolwidth}{0.3\paperwidth} % Width of one column
+%\setlength{\twocolwidth}{0.464\paperwidth} % Width of two columns
+\setlength{\threecolwidth}{0.708\paperwidth} % Width of three columns
+\setlength{\topmargin}{-0.5in} % Reduce the top margin size
+%-----------------------------------------------------------
+
+\newcommand{\separator}{\begin{column}{\sepwidth}\end{column}}
+
+\newenvironment{poster}{
+  \addtobeamertemplate{block end}{}{\vspace*{2ex}} % White space under blocks
+  \addtobeamertemplate{block alerted end}{}{\vspace*{2ex}} % White space under highlighted (alert) blocks
+  \setlength{\belowcaptionskip}{2ex} % White space under figures
+  \setlength\belowdisplayshortskip{2ex} % White space under equations
+  \begin{frame}[t,fragile,environment=poster]
+  \begin{columns}[t] % consists of three major columns, the second of which is split into two columns twice
+  \separator
+}{
+  \separator
+  \end{columns}
+  \end{frame}
+}

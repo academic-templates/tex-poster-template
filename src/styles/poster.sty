@@ -1,0 +1,16 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{styles/poster}[2022/10/30 Main poster package]
+
+\usepackage{styles/customcolors}
+\usepackage[scale=1.24]{styles/beamerposter}
+\usepackage{styles/beamerthemeposter}
+\usepackage{styles/customframe} % Must be loaded AFTER beamerthemeposter !
+\usepackage{booktabs} % Top and bottom rules for tables
+
+% https://tex.stackexchange.com/questions/426088/texlive-pretest-2018-beamer-and-subfig-collide
+\makeatletter
+\let\@@magyar@captionfix\relax
+\makeatother
+
+\usepackage{biblatex}
+\bibliography{parts/bibliography.bib}
