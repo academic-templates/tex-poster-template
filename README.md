@@ -2,14 +2,14 @@
 
 The goal of this template is to provide a nice-looking poster layout, easy to configure and fill in.
 
-> This poster template is a largely inspired but a purified version of [this template](https://github.com/UCL-INMA/ICTEAMposter).
+> This poster template is a largely inspired but purified version of [this template](https://github.com/UCL-INMA/ICTEAMposter).
 > 
 > Credits to:
 > - The [Computational Pysics and Biophysics Group at Jacobs University](http://ukleinekat.user.jacobs-university.de/) for creating the [poster template](https://teamwork.jacobs-university.de:8443/confluence/display/CoPandBiG/LaTeX+Poster)
 > - [Nathaniel Johnston](https://www.nathanieljohnston.com) for the [enhanced template](https://www.nathanieljohnston.com/2009/08/latex-poster-template/)
 > - [Benoît Legat](https://blegat.github.io/) for the [ICTEAM poster beamer style](https://github.com/UCL-INMA/ICTEAMposter)
 
-Here is an example preview for the header page, table of content, and other main document items:
+Here is an example preview:
 
 <p align="center"><img src="https://raw.githubusercontent.com/dhondta/tex-poster-template/master/doc/preview.png" width="35%">
 
@@ -53,6 +53,7 @@ Parts that you should adapt:
 You may also like these:
 
 - [TeX Book Template](https://github.com/dhondta/tex-book-template): A template for writing a nice book with LaTeX.
+- [TeX Cheat Sheet Template](https://github.com/dhondta/tex-cheat-sheet-template): A template for creating a nice cheat sheet with LaTeX.
 - [TeX Course Index Template](https://github.com/dhondta/tex-course-index-template): A template for writing a condensed course index leveraging LaTeX indexing.
 - [TeX Master Thesis Template](https://github.com/dhondta/tex-master-thesis-template): A template for writing a nice master thesis dissertation with LaTeX.
 
