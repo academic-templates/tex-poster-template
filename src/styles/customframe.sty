@@ -1,6 +1,8 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{styles/customframe}[2022/10/30 Custom Beamer frame package]
 
+\RequirePackage{pifont}
+\usetikzlibrary{shadows}
 %-----------------------------------------------------------
 % Column widths and overall poster size
 % For setting sepwidth, onecolwidth and twocolwidth values, choose the number of columns and the separation first
@@ -36,3 +38,30 @@
   \end{columns}
   \end{frame}
 }
+
+\newsavebox{\picbox}
+\newcommand{\custombox}[3]{
+  \vspace{-.5cm}
+  \begin{center}
+  \savebox{\picbox}{\includegraphics[width=#2]{#3}}
+  \tikz\node [draw, rounded corners=#1, line width=2pt,
+    drop shadow={shadow xshift=5pt, shadow yshift=-5pt, shadow scale=1},
+    color=black, minimum width=\wd\picbox,
+    minimum height=\ht\picbox, path picture={
+      \node at (path picture bounding box.center) {
+        \usebox{\picbox}};
+    }] {};
+  \end{center}\vspace{-.5cm}}
+\newcommand{\customboxbl}[2]{
+  \vspace{-1cm}
+  \begin{center}
+  \savebox{\picbox}{\includegraphics[width=#1]{#2}}
+  \tikz\node [draw, line width=0pt, color=white,
+    minimum width=\wd\picbox, minimum height=\ht\picbox, path picture={
+      \node at (path picture bounding box.center) {
+        \usebox{\picbox}};
+    }] {};
+  \end{center}\vspace{-1cm}}
+
+\newcommand*\ok{\ding{51}}
+\newcommand*\nok{\ding{55}}
